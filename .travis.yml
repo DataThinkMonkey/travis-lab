@@ -1,10 +1,39 @@
 language: python
 
 python:
-
+# python3 includes th os.system module.
   - "3.6"
+
 install: 
+# Add anthony that needs to be installed. 
+# Can be pip install or pip install -r requirements.txt
+#
+
+virtualenv:
+# Add if using need apps to be installed with apt.        
+#  system_site_packages: true
+
+before_script:
+# Example
+# Allow us to SSH passwordless to localhost
+#  - ssh-keygen -f ~/.ssh/id_rsa -N ""
+#  - cp ~/.ssh/{id_rsa.pub,authorized_keys}
+# Creation of an SSH agent for testing forwarding
+#  - eval $(ssh-agent)
+#  - ssh-add
+
+env:
+  - hello="hello world!"
+
+services:
+# - mariadb
 
 script: 
-
+# can be multiple scripts
   - python hello.py
+
+notifications:
+#  email: false
+
+after_success:
+#    
