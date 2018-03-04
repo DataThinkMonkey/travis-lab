@@ -23,7 +23,7 @@ before_script:
 #  - ssh-add
 
 env:
-  - hello="hello world!"
+  - hello="hello wold!"
 
 services:
 # - mariadb
